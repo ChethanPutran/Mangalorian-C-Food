@@ -1,0 +1,6 @@
+maplace.js--> embedded gmmaps
+Magific popups
+tooltipster
+typer.js
+onepagescrollback
+animate.css
