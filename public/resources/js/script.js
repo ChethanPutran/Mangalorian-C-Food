@@ -1,17 +1,29 @@
+let i = 0;
+let txt = " healthy meals."; /* The text */
+let fSpeed = 400; /* The speed/duration of the effect in milliseconds */
+let rSpeed = 100; /* The speed/duration of the effect in milliseconds */
+typeWriterForward();
 
-var i = 0;
-var txt = ' healthy meals.'; /* The text */
-var speed = 300; /* The speed/duration of the effect in milliseconds */
-typeWriter();
-
-function typeWriter() {
-  if (i < txt.length) {
+function typeWriterForward() {
+  if (i != txt.length - 1) {
     document.getElementById("changeContent").innerHTML += txt.charAt(i);
     i++;
-    setTimeout(typeWriter, speed);
+    setTimeout(typeWriterForward, fSpeed);
   } else {
-    document.getElementById("changeContent").innerHTML = '';
-    i = 0;
-    typeWriter();
+    i = txt.length;
+    typeWriterReverse();
+  }
+}
+
+function typeWriterReverse() {
+  console.log("At ", i);
+  if (i > -1) {
+    document.getElementById("changeContent").innerHTML = document
+      .getElementById("changeContent")
+      .innerHTML.slice(0, i);
+    i--;
+    setTimeout(typeWriterReverse, rSpeed);
+  } else {
+    typeWriterForward();
   }
 }
