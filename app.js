@@ -1,18 +1,17 @@
 const path = require("path");
 const express = require("express");
 const hbs = require("hbs");
-require("./db/dbConnection");
-const Message = require("./modals/Message");
 require("dotenv").config();
+require("./src/db/dbConnection");
+const Message = require("./src/modals/Message");
 const app = express();
 const port = process.env.PORT || 3000;
-const { sendEmail } = require("./emails/email");
+const { sendEmail } = require("./src/emails/email");
 
 //Defining paths for Express config
-const publicPath = path.join(__dirname, "../public");
-const viewsPath = path.join(__dirname, "../templates/views");
-const partialsPath = path.join(__dirname, "../templates/partials");
-console.log(publicPath);
+const publicPath = path.join(__dirname, "./public");
+const viewsPath = path.join(__dirname, "./templates/views");
+const partialsPath = path.join(__dirname, "./templates/partials");
 
 //Setting up public directory path
 app.use(express.static(publicPath));
