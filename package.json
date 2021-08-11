@@ -1,8 +1,8 @@
 {
-    "name": "fooddeliverywebsite",
+    "name": "Manglorian-C-Food",
     "version": "1.0.0",
     "description": "A dedicated food delivery company ",
-    "main": "index.js",
+    "main": "app.js",
     "scripts": {
         "start": "node src/app.js",
         "dev": "nodemon src/app.js"
