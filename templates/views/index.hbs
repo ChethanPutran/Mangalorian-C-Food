@@ -9,35 +9,7 @@
     <link rel="stylesheet" href="vendors/css/animate.css" type="text/css" />
     <link rel="stylesheet" href="vendors/css/grid.css" type="text/css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="/resources/favicons/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="/resources/favicons/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="/resources/favicons/favicon-16x16.png"
-    />
-    <link rel="manifest" href="/resources/favicons/site.webmanifest" />
-    <link
-      rel="mask-icon"
-      href="/resources/favicons/safari-pinned-tab.svg"
-      color="#5bbad5"
-    />
-    <link rel="shortcut icon" href="/resources/favicons/favicon.ico" />
-    <meta name="msapplication-TileColor" content="#da532c" />
-    <meta
-      name="msapplication-config"
-      content="/resources/favicons/browserconfig.xml"
-    />
+
     <meta name="theme-color" content="#ffffff" />
     <link
       rel="stylesheet"
@@ -80,11 +52,11 @@
 						src="resources/images/logo.png"
 						alt="Logo"
 					/> -->
-          <ul class="navBar jqueryAnim">
-            <li><a href="#jquery-nav">Food delivery</a></li>
+          <ul class="navBar jqueryAnim" id="navScroller">
+            <li><a href="#food">Food delivery</a></li>
             <li><a href="#work"> How it works</a></li>
             <li><a href="#cities"> Our cities</a></li>
-            <li><a href="#signUp">Sign up</a></li>
+            <li><a href="#signUp">Contact us</a></li>
           </ul>
           <a class="mobileNavIcon jqueryMblNav"><i class="fas fa-bars"></i></a>
         </div>
@@ -99,7 +71,7 @@
         <a href="#" class="btn btn-show-more scroll-to-start">Show me more</a>
       </div>
     </header>
-    <section class="section-feature jquery-plans" id="jquery-nav">
+    <section class="section-feature jquery-plans" id="food">
       <div class="row">
         <h2>Get food fast &mdash; not fast food.</h2>
         <p class="aboutContent">
@@ -251,10 +223,6 @@
             </p>
           </div>
           <a href="#" class="btn-app"><img
-              src="resources/images/download-app.svg"
-              alt="App Store Picture"
-            /></a>
-          <a href="#" class="btn-app"><img
               src="resources/images/download-app-android.png"
               alt="Play Store Picture"
             /></a>
@@ -267,7 +235,7 @@
       </div>
       <div class="row jquery-wp-3 animate__animated" id="wp-3">
         <div class="col span-1-of-4 box shadow-box">
-          <img src="resources/images/lisbon-3.jpg" />
+          <img src="resources/images/mangalore.jpg" />
           <div class="cityTitle">Mangalore</div>
           <div class="cityInfo">
             <ion-icon name="person-outline"></ion-icon>
@@ -279,11 +247,11 @@
           </div>
           <div class="cityInfo">
             <ion-icon name="logo-twitter"></ion-icon>
-            <a href="#">@manglorian-c-food_lx</a>
+            <a href="#">@manglorian-c-food_man</a>
           </div>
         </div>
         <div class="col span-1-of-4 box shadow-box">
-          <img src="resources/images/san-francisco.jpg" />
+          <img src="resources/images/mumbai.jpg" />
           <div class="cityTitle">Mumbai</div>
           <div class="cityInfo">
             <ion-icon name="person-outline"></ion-icon>
@@ -296,11 +264,11 @@
           </div>
           <div class="cityInfo">
             <ion-icon name="logo-twitter"></ion-icon>
-            <a href="#">@manglorian-c-food_sf</a>
+            <a href="#">@manglorian-c-food_mum</a>
           </div>
         </div>
         <div class="col span-1-of-4 box shadow-box">
-          <img src="resources/images/london.jpg" />
+          <img src="resources/images/bangalore.jpg" />
           <div class="cityTitle">Bangalore</div>
           <div class="cityInfo">
             <ion-icon name="person-outline"></ion-icon>
@@ -313,11 +281,11 @@
           </div>
           <div class="cityInfo">
             <ion-icon name="logo-twitter"></ion-icon>
-            <a href="#">@manglorian-c-food_ln</a>
+            <a href="#">@manglorian-c-food_ban</a>
           </div>
         </div>
         <div class="col span-1-of-4 box shadow-box">
-          <img src="resources/images/berlin.jpg" />
+          <img src="resources/images/hyderabad.jpg" />
           <div class="cityTitle">Hyderabad</div>
           <div class="cityInfo">
             <ion-icon name="person-outline"></ion-icon>
@@ -330,7 +298,7 @@
           </div>
           <div class="cityInfo">
             <ion-icon name="logo-twitter"></ion-icon>
-            <a href="#">@manglorian-c-food_berlin</a>
+            <a href="#">@manglorian-c-food_hyd</a>
           </div>
         </div>
       </div>
@@ -486,7 +454,12 @@
     <section class="section-contact-form" id="signUp">
       <div class="row">
         <h2>We're happy to hear from you</h2>
-        <form method="post" action="#" class="contact-form">
+        <form
+          method="post"
+          action="/contact"
+          class="contact-form"
+          id="contactForm"
+        >
           <div class="row">
             <div class="col span-1-of-3">
               <label for="name">Name</label>
@@ -523,7 +496,7 @@
               <label>How did you find us?</label>
             </div>
             <div class="col span-2-of-3">
-              <select name="find-us" id="find-us">
+              <select name="findUs" id="findUs">
                 <option value="Social Media" selected>Social Media</option>
                 <option value="Friends">Friends</option>
                 <option value="Advertisements">Advertisements</option>
@@ -563,6 +536,7 @@
             </div>
           </div>
         </form>
+        <div class="snackBar" id="snackBar">ssss</div>
       </div>
     </section>
     <footer>
@@ -624,5 +598,6 @@
     <script src="vendors/js/jquery.waypoints.min.js"></script>
     <script src="resources/js/script.js"></script>
     <script src="resources/js/jquery.js"></script>
+    <script src="resources/js/formHandler.js"></script>
   </body>
 </html>

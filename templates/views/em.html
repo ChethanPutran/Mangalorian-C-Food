@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css?family=Crimson+Text:400,700&display=swap" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet" type="text/css" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+        
+        html {
+            background-color: white;
+            font-size: 16px;
+        }
+        
+        .container {
+            margin: 0 auto;
+            width: 50%;
+            font-family: "Open Sans", sans-serif;
+            padding: 0 10PX;
+            /* background-color: #e2ded7; */
+            background-color: #d2cec2;
+        }
+        
+        header {
+            background-color: black;
+            padding: 30px 0;
+        }
+        
+        .header {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+        }
+        
+        .header img {
+            max-width: 100px;
+            width: 100%;
+            height: auto;
+        }
+        
+        .header h2 {
+            font-size: 22px;
+            font-family: "Open Sans", sans-serif;
+            color: white;
+            margin: 10px 0;
+            letter-spacing: 2px;
+            text-align: center;
+        }
+        
+        .header .findHead {
+            font-size: 18px;
+            -webkit-animation: moveInOut 2s infinite;
+            animation: moveInOut 2s infinite;
+        }
+        
+        header h2 span {
+            color: #d2cec2;
+        }
+        
+        @-webkit-keyframes moveInOut {
+            0% {
+                opacity: 0;
+                -webkit-transform: translateY(-30px);
+                transform: translateY(-30px);
+            }
+            100% {
+                opacity: 1;
+                -webkit-transform: translateY(0px);
+                transform: translateY(0px);
+            }
+        }
+        
+        @keyframes moveInOut {
+            0% {
+                opacity: 0;
+                -webkit-transform: translateY(-30px);
+                transform: translateY(-30px);
+            }
+            100% {
+                opacity: 1;
+                -webkit-transform: translateY(0px);
+                transform: translateY(0px);
+            }
+        }
+        
+        .breakImg img {
+            width: 100%;
+            height: auto;
+        }
+        
+        section {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            padding: 30px 0;
+        }
+        
+        .section-2 {
+            padding: 0;
+        }
+        
+        .contentContainer {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            margin: 20px 0;
+        }
+        
+        .contentBox {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            -ms-flex-preferred-size: 50%;
+            flex-basis: 50%;
+        }
+        
+        .contentImg {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -ms-flex-preferred-size: 50%;
+            flex-basis: 50%;
+            justify-self: center;
+            padding: 20px;
+        }
+        
+        .contentBox h2 {
+            font-family: "Open Sans", sans-serif;
+            font-size: 16px;
+            line-height: 30.8px;
+            text-transform: uppercase;
+            color: #ee6603;
+            margin: 10px 0;
+        }
+        
+        .contentBox p {
+            font-size: 14px;
+            font-family: "comic sans ms", sans-serif;
+            word-wrap: break-word;
+            margin-bottom: 20px;
+            text-align: justify;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+        
+        .contentImg img {
+            display: inline-block !important;
+            width: 100%;
+            border-radius: 10px;
+            height: auto;
+        }
+        /* .contentBox img {
+            
+            border: none;
+            max-height: 100px;
+            width: auto;
+        } */
+        /* Buttons */
+        
+        .btn {
+            font-size: 14px;
+            display: inline-block;
+            color: white;
+            border-radius: 15px;
+            padding: 10px 20px;
+            background-color: #ee6603;
+            text-decoration: none;
+        }
+        /*
+      Footer */
+        
+        footer {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            padding: 30px 5px 20px;
+            background-color: black;
+        }
+        
+        footer p {
+            color: #d2cec2;
+        }
+        
+        footer h3 {
+            color: #ffffff;
+            text-align: center;
+        }
+        
+        footer h5 {
+            color: #ffffff;
+            text-align: center;
+        }
+        
+        footer .footerItem {
+            -ms-flex-preferred-size: 50%;
+            flex-basis: 50%;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
+        }
+        
+        .footerLogo img {
+            display: inline-block !important;
+            border: none;
+            height: auto;
+            width: 100%;
+            max-width: 70px;
+        }
+        
+        .footerLogo p {
+            font-size: 16px;
+            line-height: 25.6px;
+            font-family: Pacifico, cursive;
+            color: #d2cec2;
+        }
+        
+        footer ul {
+            margin: 10px 0;
+        }
+        
+        footer ul li img {
+            max-width: 28px !important;
+            margin: 0 5px;
+        }
+        
+        footer ul li {
+            list-style: none;
+        }
+        
+        .footerAdd {
+            font-size: 12px;
+            text-align: center;
+        }
+        
+        .contentBox a {
+            -webkit-box-flex: 0;
+            -ms-flex-positive: 0;
+            flex-grow: 0;
+            -ms-flex-negative: 1;
+            flex-shrink: 1;
+        }
+        
+        @media only screen and (max-width: 800px) {
+            .container {
+                width: 80%;
+            }
+        }
+        
+        @media only screen and (max-width: 550px) {
+            .container {
+                width: 100%;
+                padding: 0 15px;
+            }
+            .contentContainer {
+                flex-direction: column;
+            }
+            .contentBox {
+                flex-basis: 100%;
+            }
+            .contentImg {
+                flex-basis: 100%;
+            }
+            .contentImg img {
+                width: 80%;
+            }
+            footer {
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
+        
+        @media only screen and (max-width: 400px) {
+            .contentImg img {
+                width: 80%;
+            }
+        }
+        
+        @media only screen and (max-width: 300px) {
+            .contentImg img {
+                width: 100%;
+            }
+            .contentBox {
+                justify-content: center;
+                align-items: center;
+            }
+        }
+        
+        @media only screen and (max-width: 220px) {
+            .container {
+                padding: 10px;
+            }
+            section {
+                padding: 0;
+                padding-top: 5px;
+            }
+            .contentBox p {
+                letter-spacing: 0.3px;
+            }
+            .contentImg {
+                padding: 10px 0 0 0;
+            }
+            .contentImg img {
+                width: 100%;
+            }
+        }
+    </style>
+    <title>WELCOME</title>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <div class="container">
+                <header>
+                    <div class="header">
+                        <div>
+                            <h2>Hi <span>${name}!</span></h2>
+                        </div>
+                        <div><img src="http://drive.google.com/uc?export=view&id=1M0VCNane90HRoMbKIKX6_d2lVDSTdThm" alt="logo" /></div>
+                        <div>
+                            <h2 class="findHead">FIND YOUR BEST <span>TASTE</span> HERE</h2>
+                        </div>
+                    </div>
+                </header>
+                <section class="section-1">
+                    <div class="contentContainer">
+                        <div class="contentBox">
+                            <h2>About us</h2>
+                            <p>
+                                Hello, we're Manglorian-C-Food, your new premium food delivery service. We know you're always busy. No time for cooking. So let us take care of that, we're really good at it, we promise!
+                            </p>
+
+                            <div><a href="" class="btn">Read More</a></div>
+                        </div>
+                        <div class="contentImg">
+                            <img src="http://drive.google.com/uc?export=view&id=1_b5aL_rifA67trmGWZq5NxNRP1XVoLew" alt="aboutImg" />
+                        </div>
+                    </div>
+                </section>
+                <section class="section-2">
+                    <div class="breakImg"><img src="http://drive.google.com/uc?export=view&id=1WHSO71LRNLVkpdo76Ye1FovuTnpK2jOZ" alt="" /></div>
+
+                    <div class="contentContainer">
+                        <div class="contentImg">
+                            <img src="http://drive.google.com/uc?export=view&id=1q2B1KRWuwzMZH3rcEdYbEq9arP_UHmlj" alt="aboutImg" />
+                        </div>
+                        <div class="contentBox">
+                            <h2>Ready in 20 Minutes</h2>
+                            <p>
+                                You're only twenty minutes away from your delicious and super healthy meals delivered right to your home. We work with the best chefs in each town to ensure that you're 100% happy.
+                            </p>
+
+                            <div><a href="" class="btn">Order Now</a></div>
+                        </div>
+                    </div>
+                    <div class="contentContainer">
+                        <div class="contentBox">
+                            <h2>100% organic</h2>
+                            <p>
+                                All our vegetables are fresh, organic and local. Animals are raised without added hormones or antibiotics. Good for your health, the environment, and it also tastes better!
+                            </p>
+
+                            <div><a href="" class="btn">Order Now</a></div>
+                        </div>
+                        <div class="contentImg">
+                            <img src="http://drive.google.com/uc?export=view&id=1xja-WS3VIUwCsZAhVZQA4tpFoItZVMrn" alt="aboutImg" />
+                        </div>
+                    </div>
+                    <div class="contentContainer">
+                        <div class="contentImg">
+                            <img src="http://drive.google.com/uc?export=view&id=12Hnu2tBtJ_c3Qyrs1osVCL6vyhw_Ywma" alt="aboutImg" />
+                        </div>
+                        <div class="contentBox">
+                            <h2>UP to 365 Days/year</h2>
+                            <p>
+                                Never cook again! We really mean that. Our subscription plans include up to 365 days/year coverage. You can also choose to order more flexibly if that's your style.
+                            </p>
+
+                            <div><a href="" class="btn">Order Now</a></div>
+                        </div>
+                    </div>
+
+                    <div class="breakImg"><img src="http://drive.google.com/uc?export=view&id=1thpSqcAj_KIsw5XxQjv3Mh-T8yQQWboe" alt="" /></div>
+                </section>
+                <section>
+                    <div class="contentContainer">
+                        <div class="contentBox">
+                            <h2>BOOK A DELIVERY</h2>
+                            <p>
+                                Hello, we're Manglorian-C-Food, your new premium food delivery service. We know you're always busy. No time for cooking. So let us take care of that, we're really good at it, we promise!
+                            </p>
+
+                            <div><a href="" class="btn">Order Now</a></div>
+                        </div>
+                        <div class="contentImg"><img src="http://drive.google.com/uc?export=view&id=16cMzBZxsHUFmKZgzIzkOAcRwnGtFwhz3" alt="" />
+                        </div>
+                    </div>
+                </section>
+
+                <footer>
+                    <div class="footerLogo footerItem">
+                        <div><img src="http://drive.google.com/uc?export=view&id=1oWDmTQdBIROHXqhKcqkva_MyMVurtDUD" alt="" />
+                        </div>
+                        <div>
+                            <p>The Manglorian-C-Food</p>
+                        </div>
+                    </div>
+                    <div class="footerItem">
+                        <h3>FOLLOW US</h3>
+                        <ul>
+                            <li>
+                                <a href=""><img src="http://drive.google.com/uc?export=view&id=1BwFyu-J15PKdKA4oaXoGkHhqz3NqYSZ_" alt="" /></a>
+                                <a href=""><img src="http://drive.google.com/uc?export=view&id=1yDn22Im70FK3efmnuUwUnaTO9gRUPrFN" alt="" /></a>
+                                <a href=""><img src="http://drive.google.com/uc?export=view&id=1OnOPApS2W_OEWzZqs-S7pI4GNRK7ot7V" alt="" /></a>
+                                <a href=""><img src="http://drive.google.com/uc?export=view&id=1D88kKKcBQPfmvRKftxtEhhm_YEJ7Z1Y_" alt="" /></a>
+                            </li>
+                        </ul>
+                        <div>
+                            <h5>FIND US</h4>
+                                <p class="footerAdd">2nd Cross, Main street , Mangalore</p>
+                        </div>
+                    </div>
+                </footer>
+
+            </div>
+        </tr>
+    </table>
+
+</body>
+
+</html>
