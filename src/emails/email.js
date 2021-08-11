@@ -1,12 +1,12 @@
 const sgMail = require("@sendgrid/mail");
 sgMail.setApiKey(process.env.API_KEY_EMAIL);
 
-const sendEmail = async(name, email) => {
-    const msg = {
-        to: email,
-        from: "caarts.tech@gmail.com",
-        subject: `Hi ${name}`,
-        html: `<!DOCTYPE html>
+const sendEmail = async (name, email) => {
+  const msg = {
+    to: email,
+    from: "caarts.tech@gmail.com",
+    subject: `Hi ${name}`,
+    html: `<!DOCTYPE html>
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -3199,15 +3199,15 @@ const sendEmail = async(name, email) => {
     <!--[if IE]></div><![endif]-->
   </body>
 </html>`,
-    };
+  };
 
-    try {
-        await sgMail.send(msg);
-    } catch (error) {
-        console.error(error);
-        if (error.response) {
-            throw new Error(error.response.body);
-        }
+  try {
+    await sgMail.send(msg);
+  } catch (error) {
+    console.error(error);
+    if (error.response) {
+      throw new Error(error.response.body);
     }
+  }
 };
 module.exports = { sendEmail };

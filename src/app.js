@@ -12,6 +12,7 @@ const { sendEmail } = require("./emails/email");
 const publicPath = path.join(__dirname, "../public");
 const viewsPath = path.join(__dirname, "../templates/views");
 const partialsPath = path.join(__dirname, "../templates/partials");
+console.log(publicPath);
 
 //Setting up public directory path
 app.use(express.static(publicPath));
