@@ -1,12 +1,12 @@
 const sgMail = require("@sendgrid/mail");
 sgMail.setApiKey(process.env.API_KEY_EMAIL);
 
-const sendEmail = async(name, email) => {
-    const msg = {
-        to: email,
-        from: "caarts.tech@gmail.com",
-        subject: `Hi ${name}`,
-        html: `<!DOCTYPE html>
+const sendEmail = async (name, email) => {
+  const msg = {
+    to: email,
+    from: "caarts.tech@gmail.com",
+    subject: `Hi ${name}`,
+    html: `<!DOCTYPE html>
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -336,7 +336,7 @@ const sendEmail = async(name, email) => {
                                           font-size: 22px;
                                           line-height: 33px;
                                         "
-                                        >&nbsp;HI, ${name} .FIND YOUR BEST TASTE HERE</span
+                                        >&nbsp;HI, ${name} . &nbsp;FIND YOUR BEST TASTE HERE</span
                                       ></strong
                                     >
                                   </p>
@@ -669,6 +669,7 @@ const sendEmail = async(name, email) => {
                                           width: 100%;
                                           max-width: 300px;
                                           margin-top: 20px;
+                                          margin-bottom: 20px;
                                           border-radius: 15px;
                                         "
                                         width="344"
@@ -789,7 +790,6 @@ const sendEmail = async(name, email) => {
                                           float: none;
                                           width: 100%;
                                           max-width: 600px;
-                                          border-radius: 15px;
                                         "
                                         width="600"
                                       />
@@ -2152,7 +2152,6 @@ const sendEmail = async(name, email) => {
                                           float: none;
                                           width: 100%;
                                           max-width: 600px;
-                                          border-radius: 15px;
                                         "
                                         width="600"
                                       />
@@ -2443,6 +2442,7 @@ const sendEmail = async(name, email) => {
                                           float: none;
                                           width: 100%;
                                           margin-top: 10px;
+                                          margin-bottom: 10px;
                                           max-width: 250px;
                                           border-radius: 15px;
                                         "
@@ -3199,15 +3199,15 @@ const sendEmail = async(name, email) => {
     <!--[if IE]></div><![endif]-->
   </body>
 </html>`,
-    };
+  };
 
-    try {
-        await sgMail.send(msg);
-    } catch (error) {
-        console.error(error);
-        if (error.response) {
-            throw new Error(error.response.body);
-        }
+  try {
+    await sgMail.send(msg);
+  } catch (error) {
+    console.error(error);
+    if (error.response) {
+      throw new Error(error.response.body);
     }
+  }
 };
 module.exports = { sendEmail };
